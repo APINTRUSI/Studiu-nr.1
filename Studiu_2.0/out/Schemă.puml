@@ -1,0 +1,52 @@
+@startuml
+
+class Pacient {
+    -Id: String
+    -Nume: String
+    -Prenume: String
+    -Patronimic: String
+    -Adresa: String
+    -Telefon: String
+    -Nr_polita: int
+    -Secție: String
+    -Diagnoză: String
+    +setId(String Id): void
+    +setNume(String Nume): void
+    +setPrenume(String Prenume): void
+    +setPatronimic(String Patronimic): void
+    +setAdresa(String Adresa): void
+    +setTelefon(String Telefon): void
+    +setNr_polita(int Nr_polita): void
+    +setSecție(String Secție): void
+    +setDiagnoză(String Diagnoză): void
+    +getId(): String
+    +getNume(): String
+    +getPrenume(): String
+    +getPatronimic(): String
+    +getAdresa(): String
+    +getTelefon(): String
+    +getNr_polita(): int
+    +getSecție(): String
+    +getDiagnoză(): String
+    +toString(): String
+}
+
+class Main {
+    -vector: Pacient[]
+    -FileName: final String
+    -k: int
+    +DateToVector(): void
+    +addPatience(scanner: Scanner): void
+    +ShowPatiences(): void
+    +Save(): void
+    +Diagnoza(diagnoza: String): void
+    +Polițe(a: int, b: int): void
+    +Poliță(poliță: int): void
+    +Secție(secție: String): int
+    +Prenume(prenume: String): void
+    +main(args: String[]): void
+}
+
+Main "1" --> "0..*" Pacient
+
+@enduml
